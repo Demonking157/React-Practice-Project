@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 // import { uuid} from 'uuidv4';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
+import api from "../api/contacts";
 import Header from "./Header";
 import AddContact from "./addcontact";
 import ContactList from "./contactList";
@@ -9,7 +10,9 @@ import ContactDetail from "./ContactDetail";
 
 function App() {
   const local_storage_key = "contacts";
-  const [Contacts,setContacts]= useState([])
+  const [Contacts,setContacts]= useState([]);
+
+
   const AddContactHandler = (contact) =>{
     setContacts([...Contacts , {id : "1", ...contact}]);
   }
