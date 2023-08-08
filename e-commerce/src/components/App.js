@@ -9,7 +9,7 @@ import EditContact from "./editcontact";
 import { ContactsCrudContextProvider } from "../ContextApi/ContactCRUDContacts";
 
 function App() {
-  
+    
   // useEffect(()=>{
 
   //   const getAllContact = async()=> {
@@ -27,12 +27,10 @@ function App() {
       <Header />
       <ContactsCrudContextProvider>
       <Routes>
-        <Route path="/" exact element={<ContactList/>}  />
+        <Route path="/" exact element={<ContactList/>} />
         <Route path="/add" exact element={<AddContact/>}/>
-      
-      <Route path="/contact/:id" component={ContactDetail} ></Route>
-      
-      <Route path="/edit" component={<EditContact/>} ></Route>
+        <Route path="/contact/:id" component={ContactDetail} ></Route>
+        <Route path="/edit" component={<EditContact/>} ></Route>
 
       </Routes>
       </ContactsCrudContextProvider>
