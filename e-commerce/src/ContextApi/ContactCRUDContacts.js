@@ -22,13 +22,13 @@ export function ContactsCrudContextProvider({children}) {
       else{
         setSeacrhResult(contacts);
       }
-    }
+    };
 
       //RetrieveContacts
       const retrieveContacts= async()=>{
         const response = await api.get("/contacts");
         if(response.data) setContacts(response.data);
-      }
+      };
 
       //Delete Contacts
       const removeContactHandler = async (id) =>{
@@ -38,18 +38,18 @@ export function ContactsCrudContextProvider({children}) {
         });
     
         setContacts(newContactList);
-      }
+      };
 
       //Add Contact
       const addContactHandler = async (contact) =>{
         const request={
           id: uuid(),
-          ...contact
-        }
+          ...contact,
+        };
     
         const response = await api.post("/contacts", request );
         setContacts([...contacts , response.data]);
-      }
+      };
 
       // Update Contacts
       const updateContactHandler = async(contact) =>{
@@ -59,7 +59,7 @@ export function ContactsCrudContextProvider({children}) {
            return contact.id === id ? {...response.data}  : contact;
           })
         );
-      }
+      };
       
     const value ={
         contacts,

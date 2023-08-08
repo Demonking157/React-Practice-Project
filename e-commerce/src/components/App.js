@@ -29,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" exact element={<ContactList/>} />
         <Route path="/add" exact element={<AddContact/>}/>
-        <Route path="/contact/:id" component={ContactDetail} ></Route>
+        <Route path="/contact/:id" component={<ContactDetail/>} ></Route>
         <Route path="/edit" component={<EditContact/>} ></Route>
 
       </Routes>
