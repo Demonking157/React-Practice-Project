@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 import api from "../api/contacts";
-import { uuid} from 'uuidv4';
+import { v4 as uuid} from 'uuid';
 
 const contactsCrudContext = createContext();
 

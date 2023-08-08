@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
 import Header from "./Header";
 import AddContact from "./addcontact";
 import ContactList from "./contactList";
 import ContactDetail from "./ContactDetail";
-import EditContact from "./editcontact";
+import EditContact from "./editcontact"; 
 import { ContactsCrudContextProvider } from "../ContextApi/ContactCRUDContacts";
 
 function App() {
